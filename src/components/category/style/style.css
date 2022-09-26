@@ -1,0 +1,32 @@
+.category {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.category_men a {
+  position: absolute;
+  top: 116em;
+  left: 24em;
+  background-color: #605f5f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1.5em 3.5em;
+}
+
+.category_women a {
+  position: absolute;
+  right: 26em;
+  top: 116em;
+  background-color: #605f5f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1.5em 3.5em;
+}

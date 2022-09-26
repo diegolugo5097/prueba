@@ -1,0 +1,18 @@
+.complete_look {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 90px;
+}
+
+.complete_look div {
+  width: 369px;
+  height: 67%;
+  margin-bottom: 38px;
+}
+
+.complete_look h3 {
+  text-align: center;
+}

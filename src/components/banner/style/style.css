@@ -1,0 +1,23 @@
+.banner img {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 1076px;
+  clip-path: inset(0px 0px 248px 0px);
+  border-top: 1px solid;
+  margin-bottom: -9%;
+}
+
+.banner a {
+  position: absolute;
+  top: 60em;
+  right: 36em;
+  background-color: white;
+  color: rgb(75, 75, 75);
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1em 4.5em;
+  box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+}

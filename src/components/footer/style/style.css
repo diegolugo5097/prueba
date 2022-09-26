@@ -1,0 +1,94 @@
+.footer_social {
+  width: 100%;
+  display: block;
+  background: hsl(0, 0%, 90%);
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  margin-top: 25px;
+}
+
+.footer_social h2 {
+  color: #575656;
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.footer_social hr {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+  width: 10%;
+}
+
+.footer_social img {
+  width: 1.5%;
+  margin: 10px;
+}
+
+.footer_middle {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 200px 15px 200px;
+}
+
+.footer_middle li {
+  list-style: none;
+  color: gray;
+  margin-top: 10px;
+}
+
+.footer_middle ul {
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.four_section {
+  width: 20%;
+}
+
+.email_subcription {
+  width: 100%;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.last_section {
+  display: flex;
+}
+
+.developers {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+
+.certificate {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+
+.method_pay {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.developers img {
+  width: 10%;
+  height: 56%;
+}
+
+.certificate img {
+  width: 10%;
+  height: 56%;
+}
+
+.method_pay img {
+  width: 10%;
+  height: 56%;
+}

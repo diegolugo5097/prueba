@@ -1,0 +1,146 @@
+[
+  {
+    "nombre": "Zapato azul",
+    "precio": 5000,
+    "referencia": "G40",
+    "seccion": "1",
+    "id": "1",
+    "foto": "/img_zapatos/1.jpg"
+  },
+  {
+    "nombre": "Zapato rojo",
+    "precio": 5000,
+    "referencia": "G40",
+    "seccion": "1",
+    "id": "2",
+    "foto": "/img_zapatos/2.jpg"
+  },
+  {
+    "nombre": "Zapato verde",
+    "precio": 5000,
+    "referencia": "G40",
+    "seccion": "1",
+    "id": "3",
+    "foto": "/img_zapatos/3.jpg"
+  },
+  {
+    "nombre": "Zapato gris",
+    "precio": 5000,
+    "referencia": "G40",
+    "seccion": "1",
+    "id": "4",
+    "foto": "/img_zapatos/4.jpg"
+  },
+  {
+    "nombre": "Zapato cafe",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "5",
+    "foto": "/img_zapatos/5.jpg"
+  },
+  {
+    "nombre": "Zapato miel",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "6",
+    "foto": "/img_zapatos/6.jpg"
+  },
+  {
+    "nombre": "Zapato aguamarina",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "7",
+    "foto": "/img_zapatos/7.jpg"
+  },
+  {
+    "nombre": "Zapato piel",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "8",
+    "foto": "/img_zapatos/8.jpg"
+  },
+  {
+    "nombre": "Zapato perla",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "9",
+    "foto": "/img_zapatos/9.jpg"
+  },
+  {
+    "nombre": "Zapato marinado",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "10",
+    "foto": "/img_zapatos/10.jpg"
+  },
+  {
+    "nombre": "Zapato azul1",
+    "precio": 5000,
+    "referencia": "G41",
+    "id": "11",
+    "foto": "/img_zapatos/11.jpg"
+  },
+  {
+    "nombre": "Zapato azul2",
+    "precio": 5000,
+    "referencia": "G41",
+    "id": "12",
+    "foto": "/img_zapatos/11.jpg"
+  },
+  {
+    "nombre": "Zapato azul3",
+    "precio": 5000,
+    "referencia": "G41",
+    "id": "13",
+    "foto": "/img_zapatos/13.jpg"
+  },
+  {
+    "nombre": "Zapato azul4",
+    "precio": 5000,
+    "referencia": "G41",
+    "id": "14",
+    "foto": "/img_zapatos/14.jpg"
+  },
+  {
+    "nombre": "Zapato azul5",
+    "precio": 5000,
+    "referencia": "G41",
+    "id": "15",
+    "foto": "/img_zapatos/15.jpg"
+  },
+  {
+    "nombre": "Zapato azul6",
+    "precio": 5000,
+    "referencia": "G41",
+    "id": "16",
+    "foto": "/img_zapatos/16.jpg"
+  },
+  {
+    "nombre": "Zapato azul7",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "17",
+    "foto": "/img_zapatos/17.jpg"
+  },
+  {
+    "nombre": "Zapato azul8",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "18",
+    "foto": "/img_zapatos/18.jpg"
+  },
+  {
+    "nombre": "Zapato azul9",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "19",
+    "foto": "/img_zapatos/19.jpg"
+  },
+  {
+    "nombre": "Zapato azul10",
+    "precio": 5000,
+    "referencia": "G40",
+    "id": "20",
+    "foto": "/img_zapatos/20.jpg"
+  }
+]

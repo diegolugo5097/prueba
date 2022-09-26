@@ -1,0 +1,9 @@
+.add_cart {
+  background-color: #7a4a58;
+  border: none;
+  padding: 17px 91px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin-top: 11%;
+}
