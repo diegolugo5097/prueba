@@ -1,4 +1,4 @@
-.complete_look {
+.recommended_look {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7,19 +7,18 @@
   padding: 90px 90px 0px;
 }
 
-.complete_look div {
+.recommended_look div {
   width: 369px;
   height: 73%;
   margin-bottom: 38px;
 }
 
-.complete_look h3 {
+.recommended_look h3 {
   text-align: center;
 }
 
-.complete_title {
+.recommended_title {
   width: 79%;
-  background: lightgray;
   padding: 5px 12px;
   position: relative;
   margin: 27px 0px -61px 162px;

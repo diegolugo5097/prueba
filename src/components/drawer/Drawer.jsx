@@ -1,25 +1,33 @@
 import "./style/style.css";
 import ShopContext from "../../context/ShopContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useReducer, useState } from "react";
+import { reducer } from "./drawerReducer/drawerReducer";
 
 const Drawer = ({ transitionExit, handleExit }) => {
   const stateInit = useContext(ShopContext);
+
+  const [cartState, dispatch] = useReducer(reducer, stateInit);
 
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const arrayShoe = [];
-    stateInit.shoes.map((shoe) => {
-      stateInit.cart.filter((cart) => {
+    cartState.shoes.map((shoe) => {
+      cartState.cart.filter((cart) => {
         if (shoe.id === cart.id) {
           arrayShoe.push(Object.assign(shoe, cart));
           setCart(arrayShoe);
         }
       });
     });
-  }, [stateInit]);
+  }, [cartState]);
 
-  console.log(cart);
+  // const handleOnClick = (idShoe) => {
+  //   dispatch({
+  //     type: "REMOVE_ITEM_CART",
+  //     idShoe: idShoe,
+  //   });
+  // };
 
   return (
     <div
@@ -38,7 +46,9 @@ const Drawer = ({ transitionExit, handleExit }) => {
                 alt={item?.nombre}
               />
               <p>{item?.nombre}</p>
+              <p>${item?.quantity}</p>
               <p>${item?.precio * item?.quantity}</p>
+              {/* <button onClick={handleOnClick(item?.id)}>Eliminar</button> */}
             </div>
             <hr />
           </>

@@ -3,6 +3,7 @@ import Footer from "./../components/footer/Footer";
 import Header from "./../components/header/Header";
 import ProductDetails from "../components/productDetails/ProductDetails";
 import CompleteLook from "../components/completeLook/CompleteLook";
+import ProductRecommended from "../components/productRecommended/ProductRecommended";
 
 const Product = () => {
   return (
@@ -12,6 +13,7 @@ const Product = () => {
       <Slider />
       <ProductDetails />
       <CompleteLook />
+      <ProductRecommended />
       <Footer />
     </>
   );

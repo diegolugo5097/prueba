@@ -1,21 +1,21 @@
 import "./style/style.css";
 import { Carousel } from "react-responsive-carousel";
-import AddCartBtn from "../btnAddCart/AddCartBtn";
 import { useContext, useReducer } from "react";
-import { reducer } from "./completeLookReducer/completeLookReducer";
 import ShopContext from "../../context/ShopContext";
+import { reducer } from "../completeLook/completeLookReducer/completeLookReducer";
 
-const CompleteLook = () => {
+const ProductRecommended = () => {
   const stateInit = useContext(ShopContext);
 
   const [cartState, dispatch] = useReducer(reducer, stateInit);
 
   return (
     <div>
-      <div className="complete_title">
-        <h2>COMPLETA TU LOOK</h2>
+      <div className="recommended_title">
+        <h2>PRODUCTOS RECOMENDADOS</h2>
+        <hr />
       </div>
-      <div className="complete_look">
+      <div className="recommended_look">
         {cartState.shoes.map((shoe, index) => {
           return (
             <>
@@ -34,7 +34,7 @@ const CompleteLook = () => {
                 <div>
                   <h3>{shoe.nombre}</h3>
                   <h3>{shoe.precio}</h3>
-                  <AddCartBtn idShoe={shoe.id} dispatch={dispatch} />
+                  <hr />
                 </div>
               </div>
             </>
@@ -45,4 +45,4 @@ const CompleteLook = () => {
   );
 };
 
-export default CompleteLook;
+export default ProductRecommended;
