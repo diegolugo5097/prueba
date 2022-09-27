@@ -21,7 +21,9 @@ const Drawer = ({ transitionExit, handleExit, state, dispatch }) => {
       onClick={handleExit}
       className={`drawer ${transitionExit ? "exit" : ""}`}
     >
-      <button>Close Drawer</button>
+      <div className="button_drawer">
+        <button>X</button>
+      </div>
       {drawerState &&
         drawerState.map((item, index) => {
           return (
@@ -34,9 +36,11 @@ const Drawer = ({ transitionExit, handleExit, state, dispatch }) => {
                   alt={item?.nombre}
                 />
                 <p>{item?.nombre}</p>
-                <p>${item?.quantity}</p>
-                <p>${item?.precio * item?.quantity}</p>
-                <button onClick={() => handleOnClick(item?.id)}>
+                <p>${item?.precio}</p>
+                <button
+                  className="delete_item"
+                  onClick={() => handleOnClick(item?.id)}
+                >
                   Eliminar
                 </button>
               </div>
