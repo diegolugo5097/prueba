@@ -1,11 +1,14 @@
 import "./style/style.css";
 import logo from "./../../assets/images/logo-2.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Drawer from "../drawer/Drawer";
+import ShopContext from "../../context/ShopContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [transitionExit, setTransitionExit] = useState(false);
+
+  const stateInit = useContext(ShopContext);
 
   const handleExit = () => {
     setTransitionExit(true);
@@ -48,7 +51,9 @@ const Header = () => {
           <li>TIENDAS</li>
         </ul>
         <span className="header_shop">
-          <h3 onClick={() => setIsOpen(true)}>CARRITO 0</h3>
+          <h3 id="carrito" onClick={() => setIsOpen(true)}>
+            CARRITO {stateInit.cart.length}
+          </h3>
         </span>
         {isOpen && (
           <div className={`drawer_container ${transitionExit ? "exit" : ""}`}>

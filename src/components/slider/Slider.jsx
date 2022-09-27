@@ -3,7 +3,7 @@ import shoes from "../../data/zapato.json";
 import favorite from "./../../assets/images/heart.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./style/style.css";
-import AddCart from "../btnAddCart/AddCart";
+import AddCartBtn from "../btnAddCart/AddCartBtn";
 
 const Slider = () => {
   const getShoesByReference = shoes.filter((shoe) => shoe.referencia === "G41");
@@ -55,7 +55,7 @@ const Slider = () => {
             <u>GUÍA DE TALLAS</u>
           </div>
           <div className="add_fav_cart">
-            <AddCart />
+            <AddCartBtn />
             <img className="add_fav" src={favorite} alt="favorite" />
           </div>
         </div>

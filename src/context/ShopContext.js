@@ -1,9 +1,9 @@
 import React from "react";
-import products from "./../data/zapato.json";
+import shoes from "./../data/zapato.json";
+
+const filterCompleteLook = shoes.filter((shoe) => shoe.seccion === "1");
 
 export default React.createContext({
-  products,
+  shoes: filterCompleteLook,
   cart: [],
-  addProductToCart: (product) => {},
-  removeProductFromCart: (productId) => {},
 });
