@@ -21,12 +21,11 @@ const Slider = () => {
         <Carousel>
           {getShoesByReference.map((shoe, index) => {
             return (
-              <div>
+              <div key={index}>
                 <img
                   src={shoe.foto}
                   width={196}
                   height={300}
-                  key={index}
                   alt={shoe.nombre}
                 />
               </div>
@@ -47,8 +46,8 @@ const Slider = () => {
           />
           <h3 className="size_title">TALLA</h3>
           <div className="size_shoes">
-            {sizes.map((size) => {
-              return <span>{size}</span>;
+            {sizes.map((size, index) => {
+              return <span key={index}>{size}</span>;
             })}
           </div>
           <div className="guide_size">

@@ -1,33 +1,20 @@
 import "./style/style.css";
-import ShopContext from "../../context/ShopContext";
-import { useContext, useEffect, useReducer, useState } from "react";
-import { reducer } from "./drawerReducer/drawerReducer";
+import { Fragment, useEffect, useState } from "react";
 
-const Drawer = ({ transitionExit, handleExit }) => {
-  const stateInit = useContext(ShopContext);
-
-  const [cartState, dispatch] = useReducer(reducer, stateInit);
-
-  const [cart, setCart] = useState([]);
+const Drawer = ({ transitionExit, handleExit, state, dispatch }) => {
+  const [drawerState, setDrawerState] = useState(null);
 
   useEffect(() => {
-    const arrayShoe = [];
-    cartState.shoes.map((shoe) => {
-      cartState.cart.filter((cart) => {
-        if (shoe.id === cart.id) {
-          arrayShoe.push(Object.assign(shoe, cart));
-          setCart(arrayShoe);
-        }
-      });
-    });
-  }, [cartState]);
+    const value = state;
+    setDrawerState(value);
+  }, [state]);
 
-  // const handleOnClick = (idShoe) => {
-  //   dispatch({
-  //     type: "REMOVE_ITEM_CART",
-  //     idShoe: idShoe,
-  //   });
-  // };
+  const handleOnClick = (idShoe) => {
+    dispatch({
+      type: "REMOVE_ITEM_CART",
+      idShoe,
+    });
+  };
 
   return (
     <div
@@ -35,25 +22,28 @@ const Drawer = ({ transitionExit, handleExit }) => {
       className={`drawer ${transitionExit ? "exit" : ""}`}
     >
       <button>Close Drawer</button>
-      {cart.map((item) => {
-        return (
-          <>
-            <div className="items_drawer">
-              <img
-                width={200}
-                height={200}
-                src={item?.foto}
-                alt={item?.nombre}
-              />
-              <p>{item?.nombre}</p>
-              <p>${item?.quantity}</p>
-              <p>${item?.precio * item?.quantity}</p>
-              {/* <button onClick={handleOnClick(item?.id)}>Eliminar</button> */}
-            </div>
-            <hr />
-          </>
-        );
-      })}
+      {drawerState &&
+        drawerState.map((item, index) => {
+          return (
+            <Fragment key={index}>
+              <div className="items_drawer">
+                <img
+                  width={200}
+                  height={200}
+                  src={item?.foto}
+                  alt={item?.nombre}
+                />
+                <p>{item?.nombre}</p>
+                <p>${item?.quantity}</p>
+                <p>${item?.precio * item?.quantity}</p>
+                <button onClick={() => handleOnClick(item?.id)}>
+                  Eliminar
+                </button>
+              </div>
+              <hr />
+            </Fragment>
+          );
+        })}
     </div>
   );
 };

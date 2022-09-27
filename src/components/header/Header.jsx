@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import Drawer from "../drawer/Drawer";
 import ShopContext from "../../context/ShopContext";
 
-const Header = () => {
+const Header = ({ state, dispatch }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [transitionExit, setTransitionExit] = useState(false);
 
@@ -57,7 +57,12 @@ const Header = () => {
         </span>
         {isOpen && (
           <div className={`drawer_container ${transitionExit ? "exit" : ""}`}>
-            <Drawer handleExit={handleExit} transitionExit={transitionExit} />
+            <Drawer
+              handleExit={handleExit}
+              transitionExit={transitionExit}
+              state={state}
+              dispatch={dispatch}
+            />
           </div>
         )}
       </div>

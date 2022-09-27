@@ -1,7 +1,7 @@
 import "./style/style.css";
 
 const AddCartBtn = ({ idShoe, dispatch }) => {
-  const handleOnClick = () => {
+  const handleOnClick = (idShoe) => {
     dispatch({
       type: "ADD_TO_CART",
       idShoe,
@@ -12,7 +12,7 @@ const AddCartBtn = ({ idShoe, dispatch }) => {
     <button
       key={idShoe}
       id={idShoe}
-      onClick={handleOnClick}
+      onClick={() => handleOnClick(idShoe)}
       className="add_cart"
     >
       AÑADIR AL CARRITO

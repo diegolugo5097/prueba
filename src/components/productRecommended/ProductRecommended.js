@@ -1,6 +1,6 @@
 import "./style/style.css";
 import { Carousel } from "react-responsive-carousel";
-import { useContext, useReducer } from "react";
+import { Fragment, useContext, useReducer } from "react";
 import ShopContext from "../../context/ShopContext";
 import { reducer } from "../completeLook/completeLookReducer/completeLookReducer";
 
@@ -18,7 +18,7 @@ const ProductRecommended = () => {
       <div className="recommended_look">
         {cartState.shoes.map((shoe, index) => {
           return (
-            <>
+            <Fragment key={index}>
               <div>
                 <Carousel>
                   <div>
@@ -26,7 +26,6 @@ const ProductRecommended = () => {
                       src={shoe.foto}
                       width={200}
                       height={200}
-                      key={index}
                       alt={shoe.nombre}
                     />
                   </div>
@@ -37,7 +36,7 @@ const ProductRecommended = () => {
                   <hr />
                 </div>
               </div>
-            </>
+            </Fragment>
           );
         })}
       </div>
